@@ -3,12 +3,13 @@
 
 // Takes the current scrolling position and stores it in a variable
 var prevScrollPos = window.pageYOffset;
+const defaultScrollPos = window.pageYOffset;
 
 // Function to compair the scrolling positions
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
 
-  if (prevScrollPos > 10) {
+  if (prevScrollPos > defaultScrollPos + 50) {
     document.querySelector(".nav-bar").classList.add("visible");
 
   } else {
